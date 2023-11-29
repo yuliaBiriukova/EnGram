@@ -1,0 +1,23 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "UpstreamPathTemplate": "/catalog-service/{everything}",
+      "DownstreamScheme": "https",
+      "UseServiceDiscovery": true,
+      "ServiceName": "catalog-service",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "UpstreamPathTemplate": "/practice-service/{everything}",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "practice-service",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": { "Type": "Eureka" }
+  }
+}  
