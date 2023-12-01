@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeService", "EnGram\PracticeService.csproj", "{60AA6425-4386-4C21-99F2-F2230CE89BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeService", "PracticeService\PracticeService.csproj", "{60AA6425-4386-4C21-99F2-F2230CE89BCD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService", "CatalogService\CatalogService.csproj", "{B75E1E5F-F619-4239-93C5-5D70B05EFCA0}"
 EndProject
