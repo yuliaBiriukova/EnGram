@@ -17,9 +17,21 @@ builder.Configuration
 
 builder.Services.AddOcelot().AddEureka();
 
+var allowAnyOrigin = "AllowAnyOrigin";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(allowAnyOrigin,
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -27,6 +39,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(allowAnyOrigin);
 
 app.UseOcelot().Wait();
 

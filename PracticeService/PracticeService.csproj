@@ -13,4 +13,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EnGram.Database\EnGram.DB.csproj" />
+    <ProjectReference Include="..\EnGram.DB\EnGram.DB.csproj" />
+  </ItemGroup>
+
 </Project>

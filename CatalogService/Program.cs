@@ -1,15 +1,18 @@
+using EnGram.DB.Database;
+using Microsoft.EntityFrameworkCore;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Discovery.Eureka;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddServiceDiscovery(o => o.UseEureka());
+
+builder.Services.AddDbContext<EnGramDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EnGramDbConnection"), b => b.MigrationsAssembly("EnGram.DB")));
 
 var app = builder.Build();
 
