@@ -44,7 +44,7 @@ public class ExerciseGetByTopicIdQueryValidator : AbstractValidator<ExerciseGetB
 
     private async Task<bool> CheckTopicExists(int id, CancellationToken cancellationToken)
     {
-        return await _dbContext.Levels.AnyAsync(t => t.Id == id);
+        return await _dbContext.Topics.AnyAsync(t => t.Id == id);
     }
 
     private static string GetTopicNotExistsMessage(int id) =>
