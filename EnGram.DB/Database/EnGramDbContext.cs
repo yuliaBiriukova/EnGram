@@ -20,20 +20,6 @@ public class EnGramDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
-        modelBuilder.Entity<CompletedTopic>()
-            .HasOne(c => c.Topic)
-            .WithMany()
-            .HasForeignKey(c => c.TopicId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        modelBuilder.Entity<CompletedTopic>()
-            .HasOne(c => c.User)
-            .WithMany()
-            .HasForeignKey(c => c.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(EnGramDbContext).Assembly);
     }
 }

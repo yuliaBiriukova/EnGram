@@ -44,7 +44,7 @@ namespace EnGram.DB.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("CompletedTopics");
+                    b.ToTable("CompletedTopics", (string)null);
                 });
 
             modelBuilder.Entity("EnGram.DB.Entities.Exercise", b =>
@@ -75,7 +75,7 @@ namespace EnGram.DB.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("Exercises");
+                    b.ToTable("Exercises", (string)null);
                 });
 
             modelBuilder.Entity("EnGram.DB.Entities.Level", b =>
@@ -98,7 +98,7 @@ namespace EnGram.DB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Levels");
+                    b.ToTable("Levels", (string)null);
 
                     b.HasData(
                         new
@@ -157,7 +157,7 @@ namespace EnGram.DB.Migrations
 
                     b.HasIndex("LevelId");
 
-                    b.ToTable("Topics");
+                    b.ToTable("Topics", (string)null);
                 });
 
             modelBuilder.Entity("EnGram.DB.Entities.User", b =>
@@ -181,7 +181,7 @@ namespace EnGram.DB.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("EnGram.DB.Entities.CompletedTopic", b =>
