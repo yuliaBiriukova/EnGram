@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EnGram.Database\EnGram.DB.csproj" />
     <ProjectReference Include="..\EnGram.DB\EnGram.DB.csproj" />
   </ItemGroup>
 

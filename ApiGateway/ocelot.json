@@ -2,7 +2,7 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/{everything}",
-      "UpstreamPathTemplate": "/catalog-service/{everything}",
+      "UpstreamPathTemplate": "/catalog-service/api/{everything}",
       "DownstreamScheme": "https",
       "UseServiceDiscovery": true,
       "ServiceName": "catalog-service",
@@ -10,7 +10,7 @@
     },
     {
       "DownstreamPathTemplate": "/{everything}",
-      "UpstreamPathTemplate": "/practice-service/{everything}",
+      "UpstreamPathTemplate": "/practice-service/api/{everything}",
       "DownstreamScheme": "http",
       "UseServiceDiscovery": true,
       "ServiceName": "practice-service",
